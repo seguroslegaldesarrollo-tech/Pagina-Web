@@ -1,0 +1,20 @@
+.contact-button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1000;
+    border: 1px solid var(--secondary-color);
+}
+
+input{
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 1rem;
+}
+
+.contact-text{
+    margin-bottom: 1rem;
+}

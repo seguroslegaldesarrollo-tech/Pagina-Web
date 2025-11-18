@@ -1,0 +1,24 @@
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.link {
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.link:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .buttons-container {
+    width: fit-content;
+  }
+}
