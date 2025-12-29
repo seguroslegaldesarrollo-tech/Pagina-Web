@@ -4,7 +4,7 @@ import NavBar from "./components/navbar/NavBar";
 import HomePage from "./pages/homePage/homePage";
 import ContactDrawer from "./components/contactDrawer/ContactDrawer";
 import Footer from "./components/footer/Footer";
-import ContactPage from "./pages/contactPage/ContactPage";
+import ContactPage from "./pages/contactPage/contactPage";
 
 function App() {
   return (
