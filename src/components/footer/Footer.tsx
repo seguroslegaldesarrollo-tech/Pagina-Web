@@ -45,15 +45,6 @@ function Footer() {
             _hover={{
               color: "white",
             }}
-            href="/services"
-          >
-            Servicios
-          </Link>
-          <Link
-            color="gray"
-            _hover={{
-              color: "white",
-            }}
             href="/about-us"
           >
             Conócenos

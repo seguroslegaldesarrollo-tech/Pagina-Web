@@ -1,26 +1,20 @@
 import { Carousel, IconButton } from "@chakra-ui/react";
 import BigCarouselItem from "./BigCarouselItem";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
-import logo from "../../assets/social.png";
+import carrusel1 from "../../assets/carrusel1.png";
+import carrusel2 from "../../assets/carrusel2.png";
+import carrusel3 from "../../assets/carrusel3.png";
 
 function BigCarousel() {
   const items = [
     {
-      image: logo,
-      title: "EXPERIENCIA Y ALCANCE",
-      description:
-        "Conocemos los procesos de radicación y nos hacemos cargo de ellos. Contamos con un equipo capacitado en ataención de siniestros",
+      image: carrusel1,
     },
     {
-      image: logo,
-      title: "ATENCIÓN 24/7",
-      description: " Línea de atención las 24 horas para asistencias",
+      image: carrusel2,
     },
     {
-      image: logo,
-      title: " VERACIDAD Y PROFESIONALISMO",
-      description:
-        " Ejecutivos expertos en venta consultiva.  Asesorías jurídicas con abogados especialistas",
+      image: carrusel3,
     },
   ];
   return (
@@ -29,6 +23,7 @@ function BigCarousel() {
       slidesPerPage={1}
       className="carousel-container"
       mt={10}
+      autoplay={{ delay: 3000 }}
     >
       <Carousel.Control justifyContent="center" gap="4">
         <Carousel.PrevTrigger asChild>
@@ -46,8 +41,6 @@ function BigCarousel() {
               <BigCarouselItem
                 index={index}
                 image={item.image}
-                title={item.title}
-                description={item.description}
               />
             </Carousel.Item>
           ))}

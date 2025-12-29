@@ -6,12 +6,14 @@
   padding-inline: 2%;
   background-color: var(--secondary-color);
   color: var(--text-color);
-  height: 120px;
+  height: 80px;
   align-items: center;
+  position: fixed;
+  z-index: 1000;
 }
 
 .logo {
-  height: 120px;
+  height: 80px;
   padding-top: 10px;
   padding-bottom: 10px;
 }

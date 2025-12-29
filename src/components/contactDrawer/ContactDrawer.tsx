@@ -1,4 +1,4 @@
-import { Drawer, Button, Portal, CloseButton } from "@chakra-ui/react";
+import { Drawer, Button, Portal, CloseButton, Box, Text, chakra, Stack, Input, Textarea } from "@chakra-ui/react";
 import { TbBrandWhatsapp } from "react-icons/tb";
 import "./ContactDrawer.css";
 
@@ -18,16 +18,59 @@ function ContactDrawer() {
               <Drawer.Title>Contactanos</Drawer.Title>
             </Drawer.Header>
             <Drawer.Body>
-              <p className="contact-text">Estamos disponibles para ayudarte.</p>
-              <p className="contact-text">Email:</p>
-              <input type="email" />
-              <p className="contact-text">Telefono:</p>
-              <input type="number" />
-              <p className="contact-text">Mensaje:</p>
-              <input type="text" />
+              <Box maxW="3xl">
+                        <Text mb={6}>
+                          Tu opinión cuenta para nosotros. Si tienes alguna inquietud, háznolo
+                          saber
+                        </Text>
+              
+                        <chakra.form
+                          as="form"
+                          action="https://formspree.io/f/mojqkwoo"
+                          method="POST"
+                        >
+                          <Stack gap={4}>
+                            <Input
+                              name="nombre"
+                              placeholder="Nombre completo"
+                              borderRadius="full"
+                            />
+              
+                            <Input
+                              name="telefono"
+                              placeholder="Teléfono móvil/celular"
+                              borderRadius="full"
+                            />
+              
+                            <Input
+                              type="email"
+                              name="email"
+                              placeholder="Correo electrónico"
+                              borderRadius="full"
+                            />
+              
+                            <Input name="asunto" placeholder="Asunto" borderRadius="full" />
+              
+                            <Textarea
+                              name="mensaje"
+                              placeholder="Mensaje"
+                              borderRadius="xl"
+                              rows={5}
+                            />
+              
+                            <Button
+                              type="submit"
+                              size="lg"
+                              alignSelf="flex-start"
+                              px={10}
+                            >
+                              Enviar
+                            </Button>
+                          </Stack>
+                        </chakra.form>
+                      </Box>
             </Drawer.Body>
             <Drawer.Footer>
-              <Button>Contactar</Button>
             </Drawer.Footer>
             <Drawer.CloseTrigger asChild>
               <CloseButton size="sm" />

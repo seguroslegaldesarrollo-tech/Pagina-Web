@@ -1,21 +1,28 @@
-import { Container, Box } from "@chakra-ui/react";
+import { Container, Box, Button } from "@chakra-ui/react";
 import "./banner.css";
 
 interface BannerProps {
   title: string;
   resume: string | null;
   image: string;
+  button: string | null;
+  action: () => void | null;
 }
 
-function Banner({ title, resume, image }: BannerProps) {
+function Banner({ title, resume, image, button, action }: BannerProps) {
   return (
     <Container
       className="container-banner"
       backgroundImage={`url(${image})`}
-      backgroundSize="100vw 80vh"
+      backgroundPosition="center"
+      backgroundSize="cover"
     >
       <Box className="title-box">{title}</Box>
-      {resume && <Box className="resume-box">{resume}</Box>}
+      {resume && (
+        <Box className="resume-box">
+          {resume} {button && <Button className="button-banner" onClick={action}>{button}</Button>}
+        </Box>
+      )}
     </Container>
   );
 }
