@@ -35,8 +35,8 @@
 }
 
 /* INDICADORES */
-.carousel-container [data-carousel-indicators] {
-  margin-top: 0.5rem;
+.carousel-container {
+  margin-top: 1rem;
 }
 
 /* 📱 MOBILE */
