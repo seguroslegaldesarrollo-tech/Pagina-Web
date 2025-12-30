@@ -12,6 +12,8 @@ interface BannerProps {
 function Banner({ title, resume, image, button, action }: BannerProps) {
   return (
     <Container
+      maxW={"100%"}
+      px={0}
       className="container-banner"
       backgroundImage={`url(${image})`}
       backgroundPosition="center"

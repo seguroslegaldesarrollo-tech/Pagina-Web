@@ -18,6 +18,7 @@ import mascotas from "../../assets/cuidado-de-mascotas.png";
 import seguroHogar from "../../assets/seguro-de-hogar.png";
 import seguroEducativo from "../../assets/seguro-educativo.png";
 import CarouselItem from "./CarouselItem";
+import { useEffect, useState } from "react";
 
 function HomeCarousel() {
   const services = [
@@ -120,10 +121,29 @@ function HomeCarousel() {
         "Protege las áreas comunes de las propiedades horizontales frente a daños materiales y pérdidas",
     },
   ];
+
+  const [slides, setSlides] = useState(4);
+
+  useEffect(() => {
+    const updateSlides = () => {
+      const width = window.innerWidth;
+
+      if (width < 480) setSlides(2);
+      else if (width < 768) setSlides(3);
+      else if (width < 1024) setSlides(4);
+      else setSlides(4);
+    };
+
+    updateSlides();
+    window.addEventListener("resize", updateSlides);
+
+    return () => window.removeEventListener("resize", updateSlides);
+  }, []);
+  
   return (
     <Carousel.Root
       slideCount={services.length}
-      slidesPerPage={4}
+      slidesPerPage={slides}
       className="carousel-container"
       autoplay={{ delay: 5000 }}
     >

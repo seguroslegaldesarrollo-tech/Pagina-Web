@@ -1,5 +1,87 @@
-.carousel-container{
-    width: 80%;
-    margin: auto;
-    margin-bottom: 2rem;
+.carousel-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 3rem auto;
+  padding-inline: 1rem;
+}
+
+/* Ajuste del grupo de items */
+.carousel-container [data-part="item-group"] {
+  gap: 1rem;
+}
+
+/* Cada slide */
+.carousel-container [data-part="item"] {
+  display: flex;
+  justify-content: center;
+}
+
+/* Controles */
+.carousel-container [data-part="control"] {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Botones prev / next */
+.carousel-container button {
+  font-size: 1.1rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.carousel-container button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Indicadores */
+.carousel-container [data-part="indicator"] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.carousel-container [data-part="indicator"][data-active] {
+  background-color: var(--primary-color);
+}
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS */
+/* ===================== */
+
+@media screen and (max-width: 1200px) {
+  .carousel-container {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .carousel-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    max-width: 100%;
+    padding-inline: 0.5rem;
+  }
+
+  .carousel-container button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-container [data-part="control"] {
+    gap: 0.5rem;
+  }
 }

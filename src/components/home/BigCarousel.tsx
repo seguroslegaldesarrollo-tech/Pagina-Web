@@ -1,63 +1,60 @@
-import { Carousel, IconButton } from "@chakra-ui/react";
+import { Carousel, IconButton, Box } from "@chakra-ui/react";
 import BigCarouselItem from "./BigCarouselItem";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import carrusel1 from "../../assets/carrusel1.png";
 import carrusel2 from "../../assets/carrusel2.png";
 import carrusel3 from "../../assets/carrusel3.png";
 
+import "./BigCarousel.css";
+
 function BigCarousel() {
   const items = [
-    {
-      image: carrusel1,
-    },
-    {
-      image: carrusel2,
-    },
-    {
-      image: carrusel3,
-    },
+    { image: carrusel1 },
+    { image: carrusel2 },
+    { image: carrusel3 },
   ];
+
   return (
-    <Carousel.Root
-      slideCount={items.length}
-      slidesPerPage={1}
-      className="carousel-container"
-      mt={10}
-      autoplay={{ delay: 3000 }}
-    >
-      <Carousel.Control justifyContent="center" gap="4">
-        <Carousel.PrevTrigger asChild>
-          <IconButton
-            size="xs"
-            variant="outline"
-            borderColor={"var(--primary-color)"}
-          >
-            <GrCaretPrevious />
-          </IconButton>
-        </Carousel.PrevTrigger>
+    <Box className="carousel-wrapper">
+      <Carousel.Root
+        slideCount={items.length}
+        slidesPerPage={1}
+        className="carousel-container"
+        autoplay={{ delay: 3000 }}
+      >
+        {/* SLIDES */}
         <Carousel.ItemGroup>
           {items.map((item, index) => (
             <Carousel.Item index={index} key={index}>
-              <BigCarouselItem
-                index={index}
-                image={item.image}
-              />
+              <BigCarouselItem image={item.image} index={index} />
             </Carousel.Item>
           ))}
         </Carousel.ItemGroup>
 
+        {/* CONTROLES */}
+        <Carousel.PrevTrigger asChild>
+          <IconButton
+            aria-label="Anterior"
+            className="carousel-prev"
+            variant="plain"
+          >
+            <GrCaretPrevious size={20} />
+          </IconButton>
+        </Carousel.PrevTrigger>
+
         <Carousel.NextTrigger asChild>
           <IconButton
-            size="xs"
-            variant="outline"
-            borderColor={"var(--primary-color)"}
+            aria-label="Siguiente"
+            className="carousel-next"
+            variant="plain"
           >
-            <GrCaretNext />
+            <GrCaretNext size={20} />
           </IconButton>
         </Carousel.NextTrigger>
-      </Carousel.Control>
-      <Carousel.Indicators />
-    </Carousel.Root>
+
+        <Carousel.Indicators />
+      </Carousel.Root>
+    </Box>
   );
 }
 

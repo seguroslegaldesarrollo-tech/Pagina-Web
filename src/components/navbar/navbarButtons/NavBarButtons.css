@@ -1,24 +1,29 @@
 .buttons-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 70%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 100%;
+  max-width: 600px;
+}
+
+.link,
+.link-selected {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
+  padding: 0.25rem 0;
 }
 
 .link {
-  background-color: transparent;
   color: var(--text-color);
-  border: none;
-  font-weight: bold;
-  font-size: larger;
 }
 
 .link-selected {
   color: var(--primary-color);
-  background-color: transparent;
-  border: none;
-  font-weight: bold;
-  font-size: larger;
   text-decoration: underline;
 }
 
@@ -26,8 +31,33 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+/* 🖥️ DESKTOP GRANDE */
+@media screen and (min-width: 1200px) {
   .buttons-container {
-    width: fit-content;
+    gap: 3rem;
+  }
+}
+
+/* 📱 TABLET */
+@media screen and (max-width: 1024px) {
+  .buttons-container {
+    gap: 1.5rem;
+  }
+
+  .link,
+  .link-selected {
+    font-size: 0.95rem;
+  }
+}
+
+/* 📱 MOBILE */
+@media screen and (max-width: 768px) {
+  .buttons-container {
+    gap: 1rem;
+  }
+
+  .link,
+  .link-selected {
+    font-size: 0.85rem;
   }
 }

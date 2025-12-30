@@ -1,34 +1,70 @@
 .container {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+
   width: 100%;
-  padding-inline: 2%;
+  padding-inline: 2rem;
+
   background-color: var(--secondary-color);
   color: var(--text-color);
+
   height: 80px;
-  align-items: center;
   position: fixed;
+  top: 0;
   z-index: 1000;
 }
 
-.logo {
-  height: 80px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
+/* LOGO */
 .name-logo {
   display: flex;
-  flex-direction: row;
-  width: 30%;
-  justify-content: flex-start;
-  gap: 10px;
   align-items: center;
-  margin-left: 16px;
+  flex-shrink: 0;
 }
 
-.name {
-  font-size: xx-large;
-  font-weight: bolder;
+.logo {
+  height: 60px;
+  object-fit: contain;
+}
+
+
+.nav-actions {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+
+/* 🖥️ DESKTOP GRANDE */
+@media screen and (min-width: 1200px) {
+  .container {
+    padding-inline: 4rem;
+  }
+
+  .logo {
+    height: 70px;
+  }
+}
+
+/* 📱 TABLET */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-inline: 1.5rem;
+  }
+
+  .logo {
+    height: 55px;
+  }
+}
+
+/* 📱 MOBILE */
+@media screen and (max-width: 768px) {
+  .container {
+    height: 64px;
+    padding-inline: 1rem;
+  }
+
+  .logo {
+    height: 48px;
+  }
 }

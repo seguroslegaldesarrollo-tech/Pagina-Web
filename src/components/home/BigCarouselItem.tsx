@@ -8,7 +8,7 @@ interface BigCarouselItemProps {
 
 function BigCarouselItem({ image }: BigCarouselItemProps) {
   return (
-    <Card.Root className="card-container" gap={4}>
+    <Card.Root className="card-container">
       <Image src={image} alt="Service Image" className="card-image" />
     </Card.Root>
   );

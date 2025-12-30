@@ -19,3 +19,10 @@
     display: inline-block;
     height: 70px;
 }
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    .image{
+        height: 50px;
+    }
+}

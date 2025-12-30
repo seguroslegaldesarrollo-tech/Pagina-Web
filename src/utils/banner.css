@@ -1,63 +1,133 @@
-.container-banner{
-    min-width: 100vw;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    min-height: 50vh;
-}
-
-.image-banner{
+.container-banner {
     width: 100%;
-    padding: 0px;
-    margin: 0px;
-}
+    min-height: 50vh;
 
-.title-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 2%;
-    margin-top: 8%;
-    margin-left: 10%;
-    margin-bottom: 0;
+
+    padding: 0;
+    margin: 0;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+}
+
+/* TÍTULO */
+.title-box {
+    align-self: flex-start;
+
+    margin-left: 8%;
+    margin-top: 6%;
+
+    padding: 1.5rem 2rem;
+
     background-color: var(--secondary-color);
     color: var(--background-color);
+
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+
     border-radius: 0.5rem;
     border: 1px solid var(--background-color);
+
     width: fit-content;
+    max-width: 90%;
 }
 
-.resume-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin-bottom: 5%;
-    margin-left: 20%;
-    margin-top: -1.5rem;
+/* RESUMEN */
+.resume-box {
+    align-self: flex-start;
+
+    margin-left: 12%;
+    margin-top: 1rem;
+
+    padding: 1.75rem;
+
     background-color: var(--background-color);
     color: var(--secondary-color);
-    font-size: 1.2rem;
-    text-align: left;
+
+    font-size: 1.1rem;
+    line-height: 1.4;
+
     border-radius: 0.5rem;
     border: 1px solid var(--secondary-color);
+
     width: 28rem;
+    max-width: 90%;
 }
 
-.button-banner{
+/* BOTÓN */
+.button-banner {
+    margin-top: 1rem;
+
+    align-self: flex-end;
+
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 1rem;
-    font-size: 1.2rem;
+
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
     font-weight: bold;
-    text-align: center;
+
     border-radius: 0.5rem;
-    border: 1px solid var(--background-color);
-    align-self: flex-end;
+    border: none;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+/* TABLET */
+@media screen and (max-width: 1024px) {
+    .title-box {
+        margin-left: 5%;
+        font-size: 1.75rem;
+    }
+
+    .resume-box {
+        margin-left: 5%;
+        width: 24rem;
+    }
+
+    .main-container {
+        padding-top: 80px;
+    }
+    .container-banner {
+        padding-top: 0px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    .container-banner {
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .title-box {
+        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+        align-self: center;
+    }
+
+    .resume-box {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    .button-banner {
+        align-self: center;
+    }
+
+    .main-container {
+        padding-top: 50px;
+    }
 }

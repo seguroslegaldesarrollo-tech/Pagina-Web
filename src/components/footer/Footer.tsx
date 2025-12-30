@@ -1,4 +1,12 @@
-import { GridItem, Grid, Text, Flex, Link, Box, Image } from "@chakra-ui/react";
+import {
+  GridItem,
+  Grid,
+  Text,
+  Flex,
+  Link,
+  Box,
+  Image,
+} from "@chakra-ui/react";
 import {
   SlSocialTwitter,
   SlSocialInstagram,
@@ -13,73 +21,82 @@ function Footer() {
     { icon: <SlSocialTwitter />, name: "Twitter" },
     { icon: <SlSocialFacebook />, name: "Facebook" },
   ];
+
   return (
     <Grid
-      fontSize="xl"
-      backgroundColor={"#050A30"}
-      justifyContent="center"
-      color={"#F4F4F4"}
-      templateColumns="repeat(4, 1fr)"
-      paddingX="4%"
-      py="2%"
+      bg="#050A30"
+      color="#F4F4F4"
+      fontSize="md"
+      px={{ base: "6%", md: "4%" }}
+      py={{ base: "3rem", md: "2rem" }}
+      templateColumns={{
+        base: "1fr",
+        md: "repeat(2, 1fr)",
+        lg: "repeat(4, 1fr)",
+      }}
+      gap="2rem"
+      textAlign={{ base: "center", md: "left" }}
     >
+      {/* LOGO */}
       <GridItem>
-        <Image src={logo} alt="logo" objectFit="contain" width={"40%"} />
+        <Flex justify={{ base: "center", md: "flex-start" }}>
+          <Image
+            src={logo}
+            alt="logo"
+            objectFit="contain"
+            maxW="160px"
+          />
+        </Flex>
       </GridItem>
+
+      {/* SITES */}
       <GridItem>
-        <Text as="b" mb="6%">
+        <Text fontWeight="bold" mb="1rem">
           Sites
         </Text>
-        <Flex ml="1%" flexDirection="column">
-          <Link
-            color="gray"
-            _hover={{
-              color: "white",
-            }}
-            href="/home"
-          >
+        <Flex direction="column" gap="0.5rem">
+          <Link href="/home" color="gray.400" _hover={{ color: "white" }}>
             Inicio
           </Link>
-          <Link
-            color="gray"
-            _hover={{
-              color: "white",
-            }}
-            href="/about-us"
-          >
+          <Link href="/about-us" color="gray.400" _hover={{ color: "white" }}>
             Conócenos
           </Link>
-          <Link
-            color="gray"
-            _hover={{
-              color: "white",
-            }}
-            href="/contact"
-          >
-            Contactanos
+          <Link href="/contact" color="gray.400" _hover={{ color: "white" }}>
+            Contáctanos
           </Link>
         </Flex>
       </GridItem>
+
+      {/* SOCIAL */}
       <GridItem>
-        <Text as="b">Social</Text>
-        {socials.map((social) => (
-          <Flex marginY="2%" key={social.name}>
+        <Text fontWeight="bold" mb="1rem">
+          Social
+        </Text>
+        <Flex direction="column" gap="0.75rem">
+          {socials.map((social) => (
             <Link
-              color="gray"
-              _hover={{
-                color: "white",
-              }}
+              key={social.name}
+              color="gray.400"
+              _hover={{ color: "white" }}
             >
-              <Flex>
-                <Box>{social.icon}</Box>
-                <Box marginLeft="15%">{social.name}</Box>
+              <Flex align="center" gap="0.75rem">
+                <Box fontSize="lg">{social.icon}</Box>
+                <Text>{social.name}</Text>
               </Flex>
             </Link>
-          </Flex>
-        ))}
+          ))}
+        </Flex>
       </GridItem>
-      <GridItem alignSelf={"end"}>
-        <Text>© 2025 — All rights reserved.</Text>
+
+      {/* COPYRIGHT */}
+      <GridItem
+        display="flex"
+        alignItems={{ base: "center", lg: "flex-end" }}
+        justifyContent={{ base: "center", lg: "flex-end" }}
+      >
+        <Text fontSize="sm" color="gray.400">
+          © 2025 — All rights reserved.
+        </Text>
       </GridItem>
     </Grid>
   );
