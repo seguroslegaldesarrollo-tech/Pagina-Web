@@ -14,7 +14,7 @@ import logo from "../../assets/logo.png";
 
 export default function AboutPage() {
   return (
-    <Box bg="white">
+    <Box bg="white" className="page-background">
       {/* HERO */}
       <Box w="100%" h={{ base: "220px", md: "400px" }}>
         <Image

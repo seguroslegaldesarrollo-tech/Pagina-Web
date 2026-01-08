@@ -1,15 +1,12 @@
-import { Container, Box, Button } from "@chakra-ui/react";
+import { Container, Box } from "@chakra-ui/react";
 import "./banner.css";
 
 interface BannerProps {
   title: string;
-  resume: string | null;
   image: string;
-  button: string | null;
-  action: () => void | null;
-}
+  }
 
-function Banner({ title, resume, image, button, action }: BannerProps) {
+function Banner({ title, image }: BannerProps) {
   return (
     <Container
       maxW={"100%"}
@@ -20,11 +17,6 @@ function Banner({ title, resume, image, button, action }: BannerProps) {
       backgroundSize="cover"
     >
       <Box className="title-box">{title}</Box>
-      {resume && (
-        <Box className="resume-box">
-          {resume} {button && <Button className="button-banner" onClick={action}>{button}</Button>}
-        </Box>
-      )}
     </Container>
   );
 }

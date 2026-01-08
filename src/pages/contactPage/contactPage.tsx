@@ -25,7 +25,7 @@ import contactImage from "../../assets/contact-image.png";
 
 export default function ContactPage() {
   return (
-    <Box bg="white">
+    <Box bg="white" className="page-background">
       {/* HERO */}
       <Box w="100%" h={{ base: "200px", md: "400px" }}>
         <Image
