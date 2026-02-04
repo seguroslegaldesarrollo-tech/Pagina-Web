@@ -40,7 +40,7 @@ export default function AboutPage() {
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={10} alignItems="center">
           <Box>
             <Text mb={4}>
-              Con más de 7 años en el mercado asegurador, en Serviseguros Legal
+              Con más de 7 años en el mercado asegurador, en Legal Seguros
               de la mano con M&A, velamos por el bienestar y el amparo de las
               personas y sus patrimonios, ofreciendo una amplia variedad de
               propuestas competitivas, además de un exclento servicio al

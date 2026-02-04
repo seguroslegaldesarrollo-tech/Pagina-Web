@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo-h.png";
 import NavBarButtons from "./navbarButtons/NavBarButtons";
 
 function NavBar() {

@@ -7,7 +7,7 @@ import "./homePage.css";
 import BigCarousel from "@/components/home/BigCarousel";
 
 function HomePage() {
-  const title = "SERVISEGUROS LEGAL";
+  const title = "LEGAL SEGUROS";
   return (
     <Box bg="white" className="page-background">
       <Banner image={BannerHome} title={title} />
