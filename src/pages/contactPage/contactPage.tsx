@@ -81,7 +81,7 @@ export default function ContactPage() {
             </Text>
             <Flex gap={3} align="center">
               <Icon as={FaPhoneAlt} />
-              <Text>3153507645</Text>
+              <Text>+57 315 3507645</Text>
             </Flex>
           </Stack>
         </SimpleGrid>
@@ -89,7 +89,7 @@ export default function ContactPage() {
         {/* CORREO */}
         <Flex gap={3} align="center" mb={12}>
           <Icon as={FaEnvelope} boxSize={6} />
-          <Text>comercialgenerales1@serviseguros.co</Text>
+          <Text>comercialgenerales1@servisegurosmia.co</Text>
         </Flex>
 
         {/* FORMULARIO */}

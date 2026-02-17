@@ -1,12 +1,4 @@
-import {
-  GridItem,
-  Grid,
-  Text,
-  Flex,
-  Link,
-  Box,
-  Image,
-} from "@chakra-ui/react";
+import { GridItem, Grid, Text, Flex, Link, Box, Image } from "@chakra-ui/react";
 import {
   SlSocialTwitter,
   SlSocialInstagram,
@@ -16,11 +8,13 @@ import {
 import logo from "../../assets/logo.png";
 
 function Footer() {
+  const socials = [];
+  /*
   const socials = [
     { icon: <SlSocialInstagram />, name: "Instagram" },
     { icon: <SlSocialTwitter />, name: "Twitter" },
     { icon: <SlSocialFacebook />, name: "Facebook" },
-  ];
+  ];*/
 
   return (
     <Grid
@@ -40,12 +34,7 @@ function Footer() {
       {/* LOGO */}
       <GridItem>
         <Flex justify={{ base: "center", md: "flex-start" }}>
-          <Image
-            src={logo}
-            alt="logo"
-            objectFit="contain"
-            maxW="160px"
-          />
+          <Image src={logo} alt="logo" objectFit="contain" maxW="160px" />
         </Flex>
       </GridItem>
 
@@ -70,9 +59,18 @@ function Footer() {
       {/* SOCIAL */}
       <GridItem>
         <Text fontWeight="bold" mb="1rem">
-          Social
+          Contacto
         </Text>
         <Flex direction="column" gap="0.75rem">
+          <Flex align="center" gap="0.75rem" color="gray.400">
+            <Text>Cra 50 No. 45A - 40 Bogotá D.C</Text>
+          </Flex>
+          <Flex align="center" gap="0.75rem" color="gray.400">
+            <Text>+57 315 3507645</Text>
+          </Flex>
+          <Flex align="center" gap="0.75rem" color="gray.400">
+            <Text>comercialgenerales1@servisegurosmia.co</Text>
+          </Flex>
           {socials.map((social) => (
             <Link
               key={social.name}

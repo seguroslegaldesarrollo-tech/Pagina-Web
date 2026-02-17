@@ -6,11 +6,11 @@ import {
   Image,
   SimpleGrid,
   Flex,
-  Icon
+  Icon,
 } from "@chakra-ui/react";
 import { FaHandshake, FaCogs } from "react-icons/fa";
 import aboutImage from "../../assets/about.png";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/slogan.png";
 
 export default function AboutPage() {
   return (
@@ -39,12 +39,22 @@ export default function AboutPage() {
 
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={10} alignItems="center">
           <Box>
-            <Text mb={4}>
-              Con más de 7 años en el mercado asegurador, en Legal Seguros
-              de la mano con M&A, velamos por el bienestar y el amparo de las
-              personas y sus patrimonios, ofreciendo una amplia variedad de
-              propuestas competitivas, además de un exclento servicio al
-              cliente.
+            <Text mb={4} textAlign="justify">
+              En SEGUROS LEGAL brindamos soluciones integrales en seguros con
+              respaldo jurídico especializado, enfocadas en proteger el
+              patrimonio, la vida y los proyectos de quienes depositan su
+              confianza en nosotros. Nos distinguimos por un modelo de
+              acompañamiento cercano y permanente: asesoramos antes de asegurar,
+              orientamos durante todo el proceso y respaldamos cada eventualidad
+              hasta su resolución. Nuestros clientes no enfrentan solos trámites
+              ni reclamaciones; cuentan con un equipo que representa sus
+              intereses con firmeza, claridad y responsabilidad. Nuestra cultura
+              FIRME (Fe, Integridad, Resultados con Responsabilidad, Mejora
+              continua y Empatía) guía cada decisión y fortalece nuestras
+              relaciones con clientes, aliados y equipo de trabajo. Creemos en
+              un servicio humano, profesional y confiable, donde cada persona es
+              atendida como parte de una familia respaldada y protegida. Más que
+              intermediar seguros, construimos confianza.
             </Text>
           </Box>
 
@@ -67,7 +77,7 @@ export default function AboutPage() {
           </Heading>
 
           <SimpleGrid columns={{ base: 1, md: 2 }} gap={12}>
-            {/* CONFIANZA */}
+            {/* MISIÓN */}
             <Flex gap={6}>
               <Icon
                 as={FaHandshake}
@@ -76,27 +86,48 @@ export default function AboutPage() {
               />
               <Box>
                 <Text fontWeight="bold" color="var(--secondary-color)" mb={2}>
-                  CONFIANZA
+                  MISIÓN
                 </Text>
-                <Text>
-                  Gracias a nuestras alianzas con aseguradoras reconocidas a
-                  nivel internacional, brindamos a los usuarios un abanico de
-                  posibilidades para asegurar sus riesgos de la manera más
-                  óptima.
+                <Text textAlign="justify">
+                  En SEGUROS LEGAL protegemos el patrimonio, la vida y los
+                  proyectos de nuestros clientes a través de soluciones
+                  integrales en seguros con respaldo jurídico especializado.
+                  Acompañamos a cada persona durante todo el proceso (desde la
+                  asesoría inicial hasta la gestión y cierre de cualquier
+                  eventualidad) brindando orientación clara, representación
+                  firme y un servicio que simplifica cada trámite y optimiza los
+                  tiempos de respuesta. Nuestra cultura FIRME es el fundamento
+                  que sostiene nuestra manera de servir: Fe en Dios como guía y
+                  dirección de nuestras decisiones, Integridad en cada
+                  actuación, Resultados con responsabilidad, Mejora continua en
+                  cada detalle de nuestro servicio y Empatía genuina hacia
+                  quienes confían en nosotros. Más que asegurar, cuidamos
+                  personas, construyendo relaciones basadas en confianza,
+                  respaldo y tranquilidad.
                 </Text>
               </Box>
             </Flex>
 
-            {/* VIABILIDAD */}
+            {/* VISIÓN */}
             <Flex gap={6}>
               <Icon as={FaCogs} boxSize={14} color="var(--secondary-color)" />
               <Box>
                 <Text fontWeight="bold" color="var(--secondary-color)" mb={2}>
-                  VIABILIDAD
+                  VISIÓN
                 </Text>
-                <Text>
-                  Ajustamos las condiciones de aseguramiento a sus necesidades.
-                  Contamos con facilidades de pago por medio de financieras.
+                <Text textAlign="justify">
+                  Para el año 2036, consolidarnos para el como una agencia de
+                  seguros altamente reconocida a nivel nacional por su
+                  excelencia, cercanía y respaldo jurídico diferencial,
+                  posicionándonos como una marca sólida, humana y confiable
+                  dentro del sector asegurador. Expandir nuestra presencia hacia
+                  nuevos mercados internacionales, llevando nuestro modelo de
+                  acompañamiento integral y nuestra filosofía de servicio
+                  centrada en valores a más familias y empresas. Ser
+                  identificados como una organización diferente: íntegra,
+                  cercana y confiable, que responde con solvencia y hace sentir
+                  a cada cliente como parte de una familia respaldada y
+                  protegida.
                 </Text>
               </Box>
             </Flex>
