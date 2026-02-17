@@ -1,14 +1,20 @@
 import { GridItem, Grid, Text, Flex, Link, Box, Image } from "@chakra-ui/react";
+/*
 import {
   SlSocialTwitter,
   SlSocialInstagram,
   SlSocialFacebook,
 } from "react-icons/sl";
-
+*/
 import logo from "../../assets/logo.png";
 
+interface Social {
+  icon: string;
+  name: string;
+}
+
 function Footer() {
-  const socials = [];
+  const socials: Social[] = [];
   /*
   const socials = [
     { icon: <SlSocialInstagram />, name: "Instagram" },
@@ -71,7 +77,7 @@ function Footer() {
           <Flex align="center" gap="0.75rem" color="gray.400">
             <Text>comercialgenerales1@servisegurosmia.co</Text>
           </Flex>
-          {socials.map((social) => (
+          {socials && socials.map((social) => (
             <Link
               key={social.name}
               color="gray.400"
