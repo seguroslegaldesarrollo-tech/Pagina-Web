@@ -40,21 +40,18 @@ export default function AboutPage() {
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={10} alignItems="center">
           <Box>
             <Text mb={4} textAlign="justify">
-              En SEGUROS LEGAL brindamos soluciones integrales en seguros con
-              respaldo jurídico especializado, enfocadas en proteger el
-              patrimonio, la vida y los proyectos de quienes depositan su
-              confianza en nosotros. Nos distinguimos por un modelo de
-              acompañamiento cercano y permanente: asesoramos antes de asegurar,
-              orientamos durante todo el proceso y respaldamos cada eventualidad
-              hasta su resolución. Nuestros clientes no enfrentan solos trámites
-              ni reclamaciones; cuentan con un equipo que representa sus
-              intereses con firmeza, claridad y responsabilidad. Nuestra cultura
-              FIRME (Fe, Integridad, Resultados con Responsabilidad, Mejora
-              continua y Empatía) guía cada decisión y fortalece nuestras
-              relaciones con clientes, aliados y equipo de trabajo. Creemos en
-              un servicio humano, profesional y confiable, donde cada persona es
-              atendida como parte de una familia respaldada y protegida. Más que
-              intermediar seguros, construimos confianza.
+              Seguros Legal es una agencia de seguros que integra protección y
+              respaldo jurídico en un modelo de servicio orientado a proteger la
+              vida, el patrimonio y los proyectos de sus clientes. Nos
+              diferenciamos por un acompañamiento cercano y permanente:
+              asesoramos antes de asegurar, orientamos durante todo el proceso y
+              respaldamos cada eventualidad hasta su resolución, representando
+              los intereses de nuestros clientes con firmeza, claridad y
+              responsabilidad. Nuestra cultura organizacional FIRME orienta cada
+              decisión y fortalece nuestras relaciones con clientes, aliados y
+              equipo de trabajo, consolidando un servicio basado en liderazgo,
+              compromiso y excelencia. Más que intermediar seguros, construimos
+              relaciones de confianza a largo plazo.
             </Text>
           </Box>
 
@@ -89,21 +86,11 @@ export default function AboutPage() {
                   MISIÓN
                 </Text>
                 <Text textAlign="justify">
-                  En SEGUROS LEGAL protegemos el patrimonio, la vida y los
-                  proyectos de nuestros clientes a través de soluciones
-                  integrales en seguros con respaldo jurídico especializado.
-                  Acompañamos a cada persona durante todo el proceso (desde la
-                  asesoría inicial hasta la gestión y cierre de cualquier
-                  eventualidad) brindando orientación clara, representación
-                  firme y un servicio que simplifica cada trámite y optimiza los
-                  tiempos de respuesta. Nuestra cultura FIRME es el fundamento
-                  que sostiene nuestra manera de servir: Fe en Dios como guía y
-                  dirección de nuestras decisiones, Integridad en cada
-                  actuación, Resultados con responsabilidad, Mejora continua en
-                  cada detalle de nuestro servicio y Empatía genuina hacia
-                  quienes confían en nosotros. Más que asegurar, cuidamos
-                  personas, construyendo relaciones basadas en confianza,
-                  respaldo y tranquilidad.
+                  En Seguros Legal protegemos la vida, el patrimonio y los
+                  proyectos de nuestros clientes mediante soluciones integrales
+                  en seguros, con acompañamiento cercano y respaldo jurídico
+                  especializado, guiados por nuestra cultura organizacional
+                  FIRME, esencia de nuestro liderazgo y servicio.
                 </Text>
               </Box>
             </Flex>
@@ -116,18 +103,12 @@ export default function AboutPage() {
                   VISIÓN
                 </Text>
                 <Text textAlign="justify">
-                  Para el año 2036, consolidarnos para el como una agencia de
-                  seguros altamente reconocida a nivel nacional por su
-                  excelencia, cercanía y respaldo jurídico diferencial,
-                  posicionándonos como una marca sólida, humana y confiable
-                  dentro del sector asegurador. Expandir nuestra presencia hacia
-                  nuevos mercados internacionales, llevando nuestro modelo de
-                  acompañamiento integral y nuestra filosofía de servicio
-                  centrada en valores a más familias y empresas. Ser
-                  identificados como una organización diferente: íntegra,
-                  cercana y confiable, que responde con solvencia y hace sentir
-                  a cada cliente como parte de una familia respaldada y
-                  protegida.
+                  Para el año 2030, consolidarnos como una agencia de seguros
+                  líder a nivel nacional, con capacidad de expansión hacia
+                  nuevos mercados, reconocida por su excelencia, cercanía y
+                  respaldo jurídico diferencial, protegiendo a familias y
+                  empresas mediante un modelo de servicio humano, sólido y
+                  confiable.
                 </Text>
               </Box>
             </Flex>

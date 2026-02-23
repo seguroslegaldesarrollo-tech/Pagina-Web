@@ -5,6 +5,7 @@ import AlliesSection from "@/components/home/AlliesSection";
 import { Box, Heading } from "@chakra-ui/react";
 import "./homePage.css";
 import BigCarousel from "@/components/home/BigCarousel";
+import ImportantAlliesSection from "@/components/home/ImportantAlliesSection";
 
 function HomePage() {
   const title = "LEGAL SEGUROS";
@@ -17,6 +18,7 @@ function HomePage() {
       </Heading>
       <HomeCarousel />
       <AlliesSection />
+      <ImportantAlliesSection />
     </Box>
   );
 }

@@ -14,8 +14,10 @@ import {
 } from "@chakra-ui/react";
 import { chakra } from "@chakra-ui/react";
 import {
+  /*
   FaFacebookF,
   FaInstagram,
+  */
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaEnvelope,
@@ -55,6 +57,7 @@ export default function ContactPage() {
 
         {/* INFO CONTACTO */}
         <SimpleGrid columns={{ base: 1, md: 3 }} gap={10} mb={10}>
+          {/*
           <Stack gap={2}>
             <Text fontWeight="bold" color="var(--primary-color)">
               Encuéntranos en
@@ -64,6 +67,7 @@ export default function ContactPage() {
               <Icon as={FaInstagram} boxSize={6} />
             </Flex>
           </Stack>
+          */}
 
           <Stack gap={2}>
             <Text fontWeight="bold" color="var(--primary-color)">

@@ -8,7 +8,9 @@ import hdi from "../../assets/HDI-SEGUROS.png";
 import previsora from "../../assets/previsora.png";
 import bolivar from "../../assets/bolivar.png";
 import axa from "../../assets/axa-colpatria.png";
-import global from "../../assets/global-card.png";
+import solidaria from "../../assets/solidaria.png";
+import equidad from "../../assets/equidad.png";
+import allianz from "../../assets/allianz.png";
 import qualitas from "../../assets/qualitas.png";
 
 
@@ -25,9 +27,11 @@ function AlliesSection(){
           <img src={seguros} className="image"/>
           <img src={hdi} className="image"/>
           <img src={previsora} className="image"/>
-          <img src={bolivar} className="image"/>
+          <img src={equidad} className="image"/>
+          <img src={solidaria} className="image"/>
           <img src={axa} className="image"/>
-          <img src={global} className="image"/>
+          <img src={bolivar} className="image"/>
+          <img src={allianz} className="image"/>
           <img src={qualitas} className="image"/>
         </div>
       </>
