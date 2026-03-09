@@ -146,6 +146,7 @@ export default function ContactPage() {
                 size="lg"
                 alignSelf="flex-start"
                 px={10}
+                aria-label="Enviar formulario de contacto"
               >
                 Enviar
               </Button>

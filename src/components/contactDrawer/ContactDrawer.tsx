@@ -14,6 +14,7 @@ function ContactDrawer() {
         size="xl" 
         className="contact-button"
         onClick={handleWhatsAppClick}
+        aria-label="Contactar por WhatsApp"
       >
         <TbBrandWhatsapp style={{ width: "1.7rem", height: "1.7rem" }} />
       </Button>

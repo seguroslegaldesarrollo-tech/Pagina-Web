@@ -46,7 +46,7 @@ function Banner({ image }: BannerProps) {
             </HStack>
           </VStack>
 
-          <Button className="banner-cta" size="lg" onClick={handleWhatsAppClick}>
+          <Button className="banner-cta" size="lg" onClick={handleWhatsAppClick} aria-label="Cotizar seguros por WhatsApp">
             Cotiza con nosotros <Icon as={FaArrowRight} ml={2} />
           </Button>
         </VStack>

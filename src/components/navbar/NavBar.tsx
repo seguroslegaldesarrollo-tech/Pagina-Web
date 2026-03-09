@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <div className="container">
       <div className="name-logo">
-        <img className="logo" src={logo} />
+        <img className="logo" src={logo} alt="Logo Shekta Seguros" />
       </div>
       <div className="nav-actions">
         <NavBarButtons />

@@ -13,10 +13,10 @@ function ImportantAlliesSection(){
           Nuestros aliados estrategicos
         </Heading>
         <div className="important-allies-section">
-          <img src={global} className="image-big"/>
-          <img src={panamerican} className="image-big"/>
-          <img src={crediseguros} className="image-big"/>
-          <img src={finesa} className="image-big"/>
+          <img src={global} className="image-big" alt="Global Seguros"/>
+          <img src={panamerican} className="image-big" alt="Pan American Life"/>
+          <img src={crediseguros} className="image-big" alt="Crediseguros"/>
+          <img src={finesa} className="image-big" alt="Finesa"/>
         </div>
       </>
     );

@@ -67,6 +67,7 @@ function NavBarButtons() {
                 className={`mobile-link ${selected === 0 ? 'selected' : ''}`}
                 onClick={() => handleNavigation(0, "home")}
                 type="button"
+                aria-label="Navegar a página de inicio"
               >
                 INICIO
               </button>
@@ -74,6 +75,7 @@ function NavBarButtons() {
                 className={`mobile-link ${selected === 1 ? 'selected' : ''}`}
                 onClick={() => handleNavigation(1, "about-us")}
                 type="button"
+                aria-label="Navegar a página de conócenos"
               >
                 CONÓCENOS
               </button>
@@ -81,6 +83,7 @@ function NavBarButtons() {
                 className={`mobile-link ${selected === 2 ? 'selected' : ''}`}
                 onClick={() => handleNavigation(2, "contact")}
                 type="button"
+                aria-label="Navegar a página de contacto"
               >
                 CONTACTANOS
               </button>
@@ -99,6 +102,7 @@ function NavBarButtons() {
           setSelected(0);
           navigate("home");
         }}
+        aria-label="Navegar a página de inicio"
       >
         INICIO
       </button>
@@ -108,6 +112,7 @@ function NavBarButtons() {
           setSelected(1);
           navigate("about-us");
         }}
+        aria-label="Navegar a página de conócenos"
       >
         CONÓCENOS
       </button>
@@ -118,6 +123,7 @@ function NavBarButtons() {
           setSelected(2);
           navigate("contact");
         }}
+        aria-label="Navegar a página de contacto"
       >
         CONTACTANOS
       </button>
