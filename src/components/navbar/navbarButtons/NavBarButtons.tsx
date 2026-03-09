@@ -40,116 +40,53 @@ function NavBarButtons() {
     return (
       <>
         <button
-          className="hamburger-menu"
-          onTouchStart={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setIsMenuOpen(true);
-          }}
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setIsMenuOpen(true);
-          }}
-          aria-label="Abrir menú"
+          className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
           type="button"
-          style={{ touchAction: 'manipulation' }}
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <div 
-          className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}
-          onTouchStart={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setIsMenuOpen(false);
-          }}
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setIsMenuOpen(false);
-          }}
-        />
+        {isMenuOpen && (
+          <div 
+            className="mobile-menu-overlay open"
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
         
-        <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-          <div className="mobile-menu-header">
-            <h3>Menú</h3>
-            <button
-              className="close-menu"
-              onTouchStart={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                setIsMenuOpen(false);
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                setIsMenuOpen(false);
-              }}
-              aria-label="Cerrar menú"
-              type="button"
-              style={{ touchAction: 'manipulation' }}
-            >
-              ×
-            </button>
+        {isMenuOpen && (
+          <div className="mobile-menu open">
+            <div className="mobile-menu-header">
+              <h3>Menú</h3>
+            </div>
+            <div className="mobile-menu-content">
+              <button
+                className={`mobile-link ${selected === 0 ? 'selected' : ''}`}
+                onClick={() => handleNavigation(0, "home")}
+                type="button"
+              >
+                INICIO
+              </button>
+              <button
+                className={`mobile-link ${selected === 1 ? 'selected' : ''}`}
+                onClick={() => handleNavigation(1, "about-us")}
+                type="button"
+              >
+                CONÓCENOS
+              </button>
+              <button
+                className={`mobile-link ${selected === 2 ? 'selected' : ''}`}
+                onClick={() => handleNavigation(2, "contact")}
+                type="button"
+              >
+                CONTACTANOS
+              </button>
+            </div>
           </div>
-          <div className="mobile-menu-content">
-            <button
-              className={`mobile-link ${selected === 0 ? 'selected' : ''}`}
-              onTouchStart={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleNavigation(0, "home");
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleNavigation(0, "home");
-              }}
-              type="button"
-              style={{ touchAction: 'manipulation' }}
-            >
-              INICIO
-            </button>
-            <button
-              className={`mobile-link ${selected === 1 ? 'selected' : ''}`}
-              onTouchStart={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleNavigation(1, "about-us");
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleNavigation(1, "about-us");
-              }}
-              type="button"
-              style={{ touchAction: 'manipulation' }}
-            >
-              CONÓCENOS
-            </button>
-            <button
-              className={`mobile-link ${selected === 2 ? 'selected' : ''}`}
-              onTouchStart={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleNavigation(2, "contact");
-              }}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                handleNavigation(2, "contact");
-              }}
-              type="button"
-              style={{ touchAction: 'manipulation' }}
-            >
-              CONTACTANOS
-            </button>
-          </div>
-        </div>
+        )}
       </>
     );
   }
