@@ -36,9 +36,9 @@ function AlliesSection() {
     const updateSlides = () => {
       const width = window.innerWidth;
 
-      if (width < 480) setSlides(1);
-      else if (width < 768) setSlides(2);
-      else if (width < 1024) setSlides(3);
+      if (width < 480) setSlides(3);
+      else if (width < 768) setSlides(3);
+      else if (width < 1024) setSlides(4);
       else setSlides(4);
     };
 

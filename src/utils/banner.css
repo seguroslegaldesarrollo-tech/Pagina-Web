@@ -9,7 +9,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 80px;
     overflow: hidden;
     margin-bottom: -1px;
 }
@@ -143,7 +142,7 @@
         min-height: 60vh;
         align-items: center;
         text-align: center;
-        padding: 2rem 1rem;
+        padding: 0 1rem;
     }
 
     .banner-content {
@@ -203,7 +202,7 @@
 @media screen and (max-width: 480px) {
     .container-banner {
         min-height: 70vh;
-        padding: 1.5rem 0.75rem;
+        padding: 0 0.75rem;
     }
     
     .banner-content {
