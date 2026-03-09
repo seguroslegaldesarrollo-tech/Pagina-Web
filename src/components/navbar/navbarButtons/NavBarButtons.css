@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-/* � MOBILE MENU */
+/* MOBILE MENU */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -42,6 +42,9 @@
   border: none;
   cursor: pointer;
   padding: 0;
+  z-index: 3000;
+  position: relative;
+  pointer-events: auto;
 }
 
 .hamburger-menu span {
@@ -51,6 +54,15 @@
   background-color: var(--text-color);
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.hamburger-menu:hover span {
+  background-color: var(--primary-color);
+}
+
+.hamburger-menu:active {
+  transform: scale(0.95);
 }
 
 .mobile-menu-overlay {

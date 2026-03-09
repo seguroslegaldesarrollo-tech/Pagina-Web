@@ -10,7 +10,7 @@ function NavBarButtons() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth < 768);
     };
     
     checkMobile();
@@ -41,8 +41,19 @@ function NavBarButtons() {
       <>
         <button
           className="hamburger-menu"
-          onClick={() => setIsMenuOpen(true)}
+          onTouchStart={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setIsMenuOpen(true);
+          }}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setIsMenuOpen(true);
+          }}
           aria-label="Abrir menú"
+          type="button"
+          style={{ touchAction: 'manipulation' }}
         >
           <span></span>
           <span></span>
@@ -51,7 +62,16 @@ function NavBarButtons() {
 
         <div 
           className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}
-          onClick={() => setIsMenuOpen(false)}
+          onTouchStart={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setIsMenuOpen(false);
+          }}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setIsMenuOpen(false);
+          }}
         />
         
         <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
@@ -59,8 +79,19 @@ function NavBarButtons() {
             <h3>Menú</h3>
             <button
               className="close-menu"
-              onClick={() => setIsMenuOpen(false)}
+              onTouchStart={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsMenuOpen(false);
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsMenuOpen(false);
+              }}
               aria-label="Cerrar menú"
+              type="button"
+              style={{ touchAction: 'manipulation' }}
             >
               ×
             </button>
@@ -68,19 +99,52 @@ function NavBarButtons() {
           <div className="mobile-menu-content">
             <button
               className={`mobile-link ${selected === 0 ? 'selected' : ''}`}
-              onClick={() => handleNavigation(0, "home")}
+              onTouchStart={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleNavigation(0, "home");
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleNavigation(0, "home");
+              }}
+              type="button"
+              style={{ touchAction: 'manipulation' }}
             >
               INICIO
             </button>
             <button
               className={`mobile-link ${selected === 1 ? 'selected' : ''}`}
-              onClick={() => handleNavigation(1, "about-us")}
+              onTouchStart={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleNavigation(1, "about-us");
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleNavigation(1, "about-us");
+              }}
+              type="button"
+              style={{ touchAction: 'manipulation' }}
             >
               CONÓCENOS
             </button>
             <button
               className={`mobile-link ${selected === 2 ? 'selected' : ''}`}
-              onClick={() => handleNavigation(2, "contact")}
+              onTouchStart={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleNavigation(2, "contact");
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleNavigation(2, "contact");
+              }}
+              type="button"
+              style={{ touchAction: 'manipulation' }}
             >
               CONTACTANOS
             </button>
