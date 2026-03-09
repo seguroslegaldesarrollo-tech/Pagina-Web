@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://seguroslegal.com/sitemap.xml
+
+# Block common non-content paths
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/
+Disallow: /*.json$
+Disallow: /*.tsx$
+Disallow: /*.ts$
+
+# Allow specific assets
+Allow: /src/assets/
+Allow: /public/

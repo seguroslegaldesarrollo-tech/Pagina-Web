@@ -3,7 +3,6 @@ import BigCarouselItem from "./BigCarouselItem";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import carrusel1 from "../../assets/carrusel1.png";
 import carrusel2 from "../../assets/carrusel2.png";
-import carrusel3 from "../../assets/carrusel3.png";
 
 import "./BigCarousel.css";
 
@@ -11,7 +10,6 @@ function BigCarousel() {
   const items = [
     { image: carrusel1 },
     { image: carrusel2 },
-    { image: carrusel3 },
   ];
 
   return (

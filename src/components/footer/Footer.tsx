@@ -69,7 +69,7 @@ function Footer() {
         </Text>
         <Flex direction="column" gap="0.75rem">
           <Flex align="center" gap="0.75rem" color="gray.400">
-            <Text>Cra 50 No. 45A - 40 Bogotá D.C</Text>
+            <Text>Cra 59 No. 45A - 40 Bogotá D.C</Text>
           </Flex>
           <Flex align="center" gap="0.75rem" color="gray.400">
             <Text>+57 315 3507645</Text>

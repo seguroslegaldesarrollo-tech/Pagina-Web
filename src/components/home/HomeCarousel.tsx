@@ -45,7 +45,7 @@ function HomeCarousel() {
     {
       image: colectivas,
       title: "COLECTIVAS AUTOS",
-      description: "Asegura vehículos de trabajo o de empleados",
+      description: "Asegura vehículos familiares y de trabajo",
     },
     {
       image: mercancias,
@@ -60,7 +60,7 @@ function HomeCarousel() {
     {
       image: polizas,
       title: "PÓLIZAS DE CUMPLIMIENTO",
-      description: "Garantía para contratos de servicios o suministros",
+      description: "Garantía para contratos",
     },
     {
       image: todoRiesgo,

@@ -24,6 +24,7 @@ import {
 } from "react-icons/fa";
 
 import contactImage from "../../assets/contact-image.png";
+import ContactMap from "../../components/contactMap/ContactMap";
 
 export default function ContactPage() {
   return (
@@ -75,7 +76,7 @@ export default function ContactPage() {
             </Text>
             <Flex gap={3} align="center">
               <Icon as={FaMapMarkerAlt} />
-              <Text>Cra 50 No. 45A - 40 Bogotá D.C</Text>
+              <Text>Cra 59 No. 45A - 40 Bogotá D.C</Text>
             </Flex>
           </Stack>
 
@@ -91,10 +92,13 @@ export default function ContactPage() {
         </SimpleGrid>
 
         {/* CORREO */}
-        <Flex gap={3} align="center" mb={12}>
+        <Flex gap={3} align="center" mb={8}>
           <Icon as={FaEnvelope} boxSize={6} />
           <Text>comercialgenerales1@servisegurosmia.co</Text>
         </Flex>
+
+        {/* MAPA DE GOOGLE MAPS */}
+        <ContactMap height="400px" />
 
         {/* FORMULARIO */}
         <Box maxW="3xl">

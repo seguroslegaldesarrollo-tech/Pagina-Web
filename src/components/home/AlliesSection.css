@@ -1,34 +1,152 @@
-.allies-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5%;
-    padding-top: 3%;
-    color: var(--secondary-color);
-    flex-wrap: wrap;
-    max-width: 75%;
-    margin: auto;
-    gap: 50px;
+.allies-title {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.allies-title{
-    color: var(--primary-color);
-    text-align: center;
+.allies-carousel-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 3rem auto;
+  padding-inline: 1rem;
 }
 
-.image{
-    display: inline-block;
+/* Ajuste del grupo de items */
+.allies-carousel-container [data-part="item-group"] {
+  gap: 2rem;
+}
+
+/* Cada slide */
+.allies-carousel-container [data-part="item"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor de imagen */
+.ally-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.ally-image-container:hover {
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.ally-image {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+  opacity: 1;
+  transition: transform 0.3s ease;
+}
+
+.ally-image:hover {
+  transform: scale(1.05);
+}
+
+/* Controles */
+.allies-carousel-container [data-part="control"] {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Botones prev / next */
+.allies-carousel-container button {
+  font-size: 1.1rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.allies-carousel-container button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Indicadores */
+.allies-carousel-container [data-part="indicator"] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.allies-carousel-container [data-part="indicator"][data-active] {
+  background-color: var(--primary-color);
+}
+
+/* ===================== */
+/* RESPONSIVE BREAKPOINTS */
+/* ===================== */
+
+@media screen and (max-width: 1200px) {
+  .allies-carousel-container {
+    max-width: 1000px;
+  }
+  
+  .allies-carousel-container [data-part="item-group"] {
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .allies-carousel-container {
+    max-width: 90%;
+  }
+  
+  .ally-image-container {
     height: 70px;
+  }
+  
+  .ally-image {
+    max-height: 60px;
+  }
 }
 
-/* MOBILE */
 @media screen and (max-width: 768px) {
-    .image{
-        height: 50px;
-    }
-    .allies-section{
-        max-width: 100%;
-        gap: 30px;
-    }
+  .allies-carousel-container {
+    max-width: 100%;
+    padding-inline: 0.5rem;
+  }
+
+  .allies-carousel-container button {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+  
+  .ally-image-container {
+    height: 60px;
+  }
+  
+  .ally-image {
+    max-height: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .allies-carousel-container [data-part="control"] {
+    gap: 0.5rem;
+  }
+  
+  .allies-carousel-container [data-part="item-group"] {
+    gap: 1rem;
+  }
+  
+  .ally-image-container {
+    height: 50px;
+  }
+  
+  .ally-image {
+    max-height: 40px;
+  }
 }
