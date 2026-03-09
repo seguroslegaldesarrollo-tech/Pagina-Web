@@ -3,11 +3,10 @@ import { FaShieldAlt, FaCheckCircle, FaPhoneAlt, FaArrowRight } from "react-icon
 import "./banner.css";
 
 interface BannerProps {
-  title: string;
   image: string;
 }
 
-function Banner({ title, image }: BannerProps) {
+function Banner({ image }: BannerProps) {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/message/7UWREMKJXKSHE1", "_blank");
   };

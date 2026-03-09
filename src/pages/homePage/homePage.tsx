@@ -9,10 +9,9 @@ import ImportantAlliesSection from "@/components/home/ImportantAlliesSection";
 import BenefitsSection from "@/components/home/BenefitsSection";
 
 function HomePage() {
-  const title = "LEGAL SEGUROS";
   return (
     <Box bg="white" className="page-background">
-      <Banner image={BannerHome} title={title} />
+      <Banner image={BannerHome} />
       <BigCarousel />
       <Heading size="3xl" letterSpacing="tight" className="title">
         Nuestros Servicios
