@@ -16,15 +16,14 @@ export default function AboutPage() {
   return (
     <Box bg="white" className="page-background">
       {/* HERO */}
-      <Box w="100%" h={{ base: "220px", md: "400px" }}>
-        <Image
-          src={aboutImage}
-          alt="Seguros y confianza"
-          w="100%"
-          h="100%"
-          objectFit="cover"
-        />
-      </Box>
+      <Box 
+        w="100%" 
+        h={{ base: "35vh", md: "60vh" }}
+        backgroundImage={`url(${aboutImage})`}
+        backgroundSize="cover"
+        backgroundPosition="center"
+        className="about-banner"
+      />
 
       {/* QUIÉNES SOMOS */}
       <Container maxW="6xl" py={16}>

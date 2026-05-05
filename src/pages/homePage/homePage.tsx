@@ -7,6 +7,7 @@ import "./homePage.css";
 import BigCarousel from "@/components/home/BigCarousel";
 import ImportantAlliesSection from "@/components/home/ImportantAlliesSection";
 import BenefitsSection from "@/components/home/BenefitsSection";
+import DSCCollageSection from "@/components/home/DSCCollageSection";
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       </Heading>
       <HomeCarousel />
       <BenefitsSection />
+      <DSCCollageSection />
       <AlliesSection />
       <ImportantAlliesSection />
     </Box>

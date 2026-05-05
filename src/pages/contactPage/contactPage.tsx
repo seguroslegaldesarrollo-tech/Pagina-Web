@@ -3,7 +3,6 @@ import {
   Container,
   Heading,
   Text,
-  Image,
   SimpleGrid,
   Stack,
   Input,
@@ -30,15 +29,14 @@ export default function ContactPage() {
   return (
     <Box bg="white" className="page-background">
       {/* HERO */}
-      <Box w="100%" h={{ base: "200px", md: "400px" }}>
-        <Image
-          src={contactImage}
-          alt="Atención al cliente"
-          w="100%"
-          h="100%"
-          objectFit="cover"
-        />
-      </Box>
+      <Box 
+        w="100%" 
+        h={{ base: "35vh", md: "60vh" }}
+        backgroundImage={`url(${contactImage})`}
+        backgroundSize="cover"
+        backgroundPosition="center"
+        className="contact-banner"
+      />
 
       {/* CONTENIDO */}
       <Container maxW="6xl" py={12}>

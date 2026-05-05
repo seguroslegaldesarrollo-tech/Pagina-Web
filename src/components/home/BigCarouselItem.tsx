@@ -9,7 +9,9 @@ interface BigCarouselItemProps {
 function BigCarouselItem({ image }: BigCarouselItemProps) {
   return (
     <Card.Root className="card-container">
-      <Image src={image} alt="Service Image" className="card-image" />
+      <div className="image-wrapper">
+        <Image src={image} alt="Service Image" className="card-image" />
+      </div>
     </Card.Root>
   );
 }
