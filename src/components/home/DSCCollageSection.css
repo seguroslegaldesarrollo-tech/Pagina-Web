@@ -25,7 +25,7 @@
 /* GRID ASIMÉTRICO MODERNO */
 .collage-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 200px 200px;
   gap: 1.5rem;
   max-width: 100%;
@@ -50,24 +50,15 @@
 }
 
 .collage-item:nth-child(4) {
-  grid-column: 4 / 5;
-  grid-row: 1 / 2;
-}
-
-.collage-item:nth-child(5) {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
 
-.collage-item:nth-child(6) {
+.collage-item:nth-child(5) {
   grid-column: 3 / 4;
   grid-row: 2 / 3;
 }
 
-.collage-item:nth-child(7) {
-  grid-column: 4 / 5;
-  grid-row: 2 / 3;
-}
 
 /* Contenedor de imagen con efectos */
 .image-container {
